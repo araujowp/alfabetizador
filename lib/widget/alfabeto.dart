@@ -15,7 +15,8 @@ Widget _letra(int index){
   return Container(
           height: 60,
           width: 60,
-          color: Colors.yellowAccent,
+          decoration: myBoxDecoration(),
+          //color: Colors.yellowAccent,
           child: Center(
             child: Text(
               String.fromCharCode(index + 65).toString(),
@@ -23,4 +24,17 @@ Widget _letra(int index){
             ),
           ),
         );
+}
+
+BoxDecoration myBoxDecoration() {
+  return BoxDecoration(
+    color: Colors.yellow,
+    border: Border.all(
+      width: 1.0,
+      color: Colors.blueGrey
+    ),
+    borderRadius: BorderRadius.all(
+        Radius.circular(5.0) //                 <--- border radius here
+    ),
+  );
 }
